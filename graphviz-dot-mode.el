@@ -441,8 +441,8 @@ The list of constant is available at http://www.research.att.com/~erg/graphviz\
     (define-key map "\C-c\C-p"    'graphviz-dot-preview)
     (define-key map "\C-c\C-c"    'compile)
     (define-key map "\C-c\C-v"    'graphviz-dot-view)
-    (setq graphviz-dot-mode-map map)
-  "Keymap used in Graphviz Dot mode."))
+    (setq graphviz-dot-mode-map map))
+  "Keymap used in Graphviz Dot mode.")
 
 ;;; Syntax table
 (defvar graphviz-dot-mode-syntax-table
