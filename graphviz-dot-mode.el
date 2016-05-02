@@ -212,9 +212,9 @@ the buffer name."
   :group 'graphviz)
 
 (defcustom graphviz-dot-preview-extension "png"
-  "*The extension to use for the compilation and preview commands.
-The format for the compilation command is `dot -T<extension>
-file.dot > file.<extension>'."
+  "*The extension to use for the compilation and preview commands. The format
+for the compilation command is
+`dot -T<extension> file.dot > file.<extension>'."
   :type 'string
   :group 'graphviz)
 
@@ -281,10 +281,9 @@ releases."
     "invtrapezium" "invhouse" "Mdiamond" "Msquare" "Mcircle" "record"
     "Mrecord" "dashed" "dotted" "solid" "invis" "bold" "filled"
     "diagonals" "rounded" )
-  "*Keywords for attribute values.
-This is used by the auto completion code.  The actual completion
-tables are built when the mode is loaded, so changes to this are
-not immediately visible."
+  "*Keywords for attribute values. This is used by the auto completion
+code. The actual completion tables are built when the mode is loaded,
+so changes to this are not immediately visible."
   :type '(repeat (string :tag "Keyword"))
   :group 'graphviz)
 
@@ -459,7 +458,7 @@ The list of constant is available at http://www.research.att.com/~erg/graphviz\
     (modify-syntax-entry ?-  "_"      st)
     (modify-syntax-entry ?>  "."      st)
     (modify-syntax-entry ?[  "(]"     st)
-                         (modify-syntax-entry ?]  ")["     st)
+    (modify-syntax-entry ?]  ")["     st)
     (modify-syntax-entry ?\" "\""     st)
     (setq graphviz-dot-mode-syntax-table st))
   "Syntax table for `graphviz-dot-mode'.")
