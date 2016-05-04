@@ -542,6 +542,18 @@ This mode can be customized by running \\[graphviz-dot-customize].
 
 Turning on Graphviz Dot mode calls the value of the variable
 `graphviz-dot-mode-hook' with no args, if that value is non-nil."
+(interactive)
+  (kill-all-local-variables)
+  (use-local-map graphviz-dot-mode-map)
+  (setq major-mode 'graphviz-dot-mode)
+  (setq mode-name "dot")
+  (setq local-abbrev-table graphviz-dot-mode-abbrev-table)
+  (set-syntax-table graphviz-dot-mode-syntax-table)
+  (set (make-local-variable 'indent-line-function) 'graphviz-dot-indent-line)
+  (set (make-local-variable 'comment-start) "//")
+  (set (make-local-variable 'comment-start-skip) "/\\*+ *\\|//+ *")
+  (modify-syntax-entry ?# "< b" graphviz-dot-mode-syntax-table)
+  (modify-syntax-entry ?\n "> b" graphviz-dot-mode-syntax-table)
   (setq-local font-lock-defaults '(graphviz-dot-font-lock-keywords))
   (setq-local comment-start "//")
   (setq-local comment-start-skip "/\\*+ *\\|//+ *")
